@@ -92,9 +92,6 @@ class Site extends Facade
 class Logs extends Facade
 {
 }
-class GeoIp extends Facade
-{
-}
 class Valet extends Facade
 {
 }
