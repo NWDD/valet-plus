@@ -1,5 +1,5 @@
 {
-    "name": "nwdd/valet-plus",
+    "name": "weprovide/valet-plus",
     "app": "Valet+",
     "description": "Blazing fast macOS PHP development environment",
     "license": "MIT",
@@ -19,10 +19,6 @@
         {
             "name": "Johann Zelger",
             "email": "j.zelger@techdivision.com"
-        },
-        {
-            "name": "Niels Wijn",
-            "email": "nielswijn@hotmail.nl"
         }
     ],
     "autoload": {
