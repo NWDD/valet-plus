@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-define('HOMEBREW_PREFIX', HOMEBREW_PREFIX);
+define('HOMEBREW_PREFIX', '/opt/homebrew');
 /**
  * Load correct autoloader depending on install location.
  */
