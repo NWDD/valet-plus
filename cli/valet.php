@@ -46,6 +46,7 @@ $app->command('install [--with-mariadb]', function ($withMariadb) {
     RedisTool::stop();
     DevTools::install();
     Binaries::installBinaries();
+    GeoIp::install();
 
     Configuration::install();
     $domain = Nginx::install();
@@ -466,6 +467,7 @@ if (is_dir(VALET_HOME_PATH)) {
         Elasticsearch::uninstall();
         RabbitMq::uninstall();
         Varnish::uninstall();
+        GeoIp::uninstall();
 
         info('Valet has been uninstalled.');
     })->descriptions('Uninstall the Valet services');

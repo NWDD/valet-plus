@@ -17,7 +17,7 @@ class DevTools
     const SUPPORTED_TOOLS = [
         self::WP_CLI_TOOL,
         self::PV_TOOL,
-        self::GEOIP_TOOL,
+//        self::GEOIP_TOOL,
         self::ZLIB_TOOL,
         self::JQ,
         self::LIBYAML
