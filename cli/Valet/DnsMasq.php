@@ -9,8 +9,8 @@ class DnsMasq
     public $files;
 
     public $resolverPath = '/etc/resolver';
-    public $configPath = '/usr/local/etc/dnsmasq.conf';
-    public $exampleConfigPath = '/usr/local/opt/dnsmasq/dnsmasq.conf.example';
+    public $configPath = HOMEBREW_PREFIX . '/etc/dnsmasq.conf';
+    public $exampleConfigPath = HOMEBREW_PREFIX . '/opt/dnsmasq/dnsmasq.conf.example';
 
     /**
      * Create a new DnsMasq instance.

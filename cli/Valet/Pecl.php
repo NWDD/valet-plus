@@ -361,14 +361,14 @@ class Pecl extends AbstractPecl
             $phpIniPath = str_replace('pear.conf', 'php.ini', $pearConfigPath);
             $phpDirPath = "/usr/local/share/$pearName";
             $pearDocDirPath = "/usr/local/share/$pearName/doc";
-            $phpExtensionDirPath = '/usr/local/lib/php/pecl/'.basename($pearConfig['ext_dir']);
-            $phpBinPath = "/usr/local/opt/$brewname/bin";
+            $phpExtensionDirPath =  '/usr/local/lib/php/pecl/'.basename($pearConfig['ext_dir']);
+            $phpBinPath = HOMEBREW_PREFIX . "/bin";
             $pearDataDirPath = "/usr/local/share/$pearName/data";
             $pearCfgDirPath = "/usr/local/share/$pearName/cfg";
             $pearWwwDirPath = "/usr/local/share/$pearName/htdocs";
             $pearManDirPath = '/usr/local/share/man';
             $pearTestDirPath = "/usr/local/share/$pearName/test";
-            $phpBinDirPath = "/usr/local/opt/$brewname/bin/php";
+            $phpBinDirPath = HOMEBREW_PREFIX . "/bin/php";
 
             // Check php_ini value of par config.
             if (empty($pearConfig['php_ini']) || $pearConfig['php_ini'] !== $phpIniPath) {

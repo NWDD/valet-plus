@@ -32,7 +32,7 @@ class PhpFpm
         self::PHP_V72_VERSION
     ];
 
-    const LOCAL_PHP_FOLDER = '/usr/local/etc/valet-php/';
+    const LOCAL_PHP_FOLDER = HOMEBREW_PREFIX . '/etc/valet-php/';
 
     public $brew;
     public $cli;
@@ -79,7 +79,7 @@ class PhpFpm
 
         $version = $this->linkedPhp();
 
-        $this->files->ensureDirExists('/usr/local/var/log', user());
+        $this->files->ensureDirExists(HOMEBREW_PREFIX . '/var/log', user());
         $this->updateConfiguration();
         $this->pecl->updatePeclChannel();
         $this->pecl->installExtensions($version);
@@ -186,7 +186,7 @@ class PhpFpm
 
         // Relink libjpeg
         info('[libjpeg] Relinking');
-        $this->cli->passthru('sudo ln -fs /usr/local/Cellar/jpeg/8d/lib/libjpeg.8.dylib /usr/local/opt/jpeg/lib/libjpeg.8.dylib');
+        $this->cli->passthru('sudo ln -fs $HOMEBREW_PREFIX/Cellar/jpeg/8d/lib/libjpeg.8.dylib $HOMEBREW_PREFIX/opt/jpeg/lib/libjpeg.8.dylib');
 
         if (!$this->linkPHP($version, $currentVersion)) {
             return;
@@ -373,11 +373,11 @@ class PhpFpm
      */
     public function linkedPhp()
     {
-        if (!$this->files->isLink('/usr/local/bin/php')) {
+        if (!$this->files->isLink(HOMEBREW_PREFIX . '/bin/php')) {
             throw new DomainException("Unable to determine linked PHP.");
         }
 
-        $resolvedPath = $this->files->readLink('/usr/local/bin/php');
+        $resolvedPath = $this->files->readLink(HOMEBREW_PREFIX . '/bin/php');
 
         $versions = self::SUPPORTED_PHP_FORMULAE;
 

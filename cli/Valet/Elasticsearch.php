@@ -7,11 +7,11 @@ use DomainException;
 class Elasticsearch
 {
     const NGINX_CONFIGURATION_STUB = __DIR__ . '/../stubs/elasticsearch.conf';
-    const NGINX_CONFIGURATION_PATH = '/usr/local/etc/nginx/valet/elasticsearch.conf';
+    const NGINX_CONFIGURATION_PATH = HOMEBREW_PREFIX . '/etc/nginx/valet/elasticsearch.conf';
 
-    const ES_CONFIG_YAML          = '/usr/local/etc/elasticsearch/elasticsearch.yml';
+    const ES_CONFIG_YAML          = HOMEBREW_PREFIX . '/etc/elasticsearch/elasticsearch.yml';
     const ES_CONFIG_DATA_PATH     = 'path.data';
-    const ES_CONFIG_DATA_BASEPATH = '/usr/local/var/';
+    const ES_CONFIG_DATA_BASEPATH = HOMEBREW_PREFIX . '/var/';
 
     const ES_FORMULA_NAME = 'elasticsearch';
 
