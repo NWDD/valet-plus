@@ -359,15 +359,15 @@ class Pecl extends AbstractPecl
             $pearName = $this->replacePhpWithPear($brewname);
 
             $phpIniPath = str_replace('pear.conf', 'php.ini', $pearConfigPath);
-            $phpDirPath = "/usr/local/share/$pearName";
-            $pearDocDirPath = "/usr/local/share/$pearName/doc";
-            $phpExtensionDirPath =  '/usr/local/lib/php/pecl/'.basename($pearConfig['ext_dir']);
+            $phpDirPath = HOMEBREW_PREFIX . "/share/$pearName";
+            $pearDocDirPath = HOMEBREW_PREFIX . "/share/$pearName/doc";
+            $phpExtensionDirPath =  HOMEBREW_PREFIX . '/lib/php/pecl/'.basename($pearConfig['ext_dir']);
             $phpBinPath = HOMEBREW_PREFIX . "/bin";
-            $pearDataDirPath = "/usr/local/share/$pearName/data";
-            $pearCfgDirPath = "/usr/local/share/$pearName/cfg";
-            $pearWwwDirPath = "/usr/local/share/$pearName/htdocs";
-            $pearManDirPath = '/usr/local/share/man';
-            $pearTestDirPath = "/usr/local/share/$pearName/test";
+            $pearDataDirPath = HOMEBREW_PREFIX . "/share/$pearName/data";
+            $pearCfgDirPath = HOMEBREW_PREFIX . "/share/$pearName/cfg";
+            $pearWwwDirPath = HOMEBREW_PREFIX . "/share/$pearName/htdocs";
+            $pearManDirPath = HOMEBREW_PREFIX . '/share/man';
+            $pearTestDirPath = HOMEBREW_PREFIX . "/share/$pearName/test";
             $phpBinDirPath = HOMEBREW_PREFIX . "/bin/php";
 
             // Check php_ini value of par config.
